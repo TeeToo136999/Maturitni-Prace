@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIM</title>
+    <link rel="icon" href="resources/nicon.png" type="image/icon type">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="nimstyle.css">
+</head>
+
+<body>
+    <section class="header">
+        <nav>
+            <div class="nav-links" id="navLinks">
+                <ul>
+                    <li><a href="index.html">Hlavní stránka</a></li>
+                    <li><a href="tictactoe.html" class="btn">TIC-TAC-TOE</a></li>
+                    <li><a href="lode.html" class="btn">LODĚ</a></li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+<div class="arrow-toggle" onclick="toggleContent()">
+    Klikni pro vysvětlení hry
+    <span class="arrow"></span>
+</div>
+<div id="content" class="hidden">
+    Hra NIM spočíva v tom, že daný hráč musí vzít poslední kámen aby vyhral.
+    V každém tahu smí hráč odebrat několik objektů (vždy alespoň jeden, maximální počet je polovina hromádky)
+    <br>V lehké variantě je 1 hromádka
+    <br>V tězké varintě jsou 3 hromádky
+</div>
+<div class="nim-game">
+    <div id="options">
+        <label for="stones">Počet kamenů (10-100):</label>
+        <input type="number" id="stones" min="10" max="100" value="10">
+    <br>
+    <br>
+        <input class="players" type="radio" id="players1" name="opponent" value ="1" checked>
+        <label for="vsComputer">Proti počítači</label>
+        <input class="players" type="radio" id="players2" name="opponent" value= "2">
+        <label  for="vsHuman">Proti hráči</label>
+    <br>
+    <input class="dif" type="radio" id="easy" name="gameselect" value="3" checked>
+    <label for="easy">Jednodušší verze NIM</label>
+    <input class="dif" type="radio" id="hard" name="gameselect" value="4">
+    <label for="hard">Těžší verze NIM</label>
+    <br>
+        <button id="startBtn">Start</button>  
+    </div>
+    <div id="game-container">
+        <div id="piles"></div>
+        <div id="status"></div>
+        <button id="resetBtn">Reset</button>
+    </div>
+</div>
+            <script src="NIM.js"></script>
+    </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lodě</title>
+    <link rel="icon" href="resources/licon.png" type="image/icon type">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="lstyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <section class="header">
+        <nav>
+            <div class="nav-links" id="navLinks">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="tictactoe.html">TIC-TAC-TOE</a></li>
+                    <li><a href="NIM.html">NIM</a></li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+<div class="arrow-toggle" onclick="toggleContent()">
+    Klikni pro vysvětlení hry
+    <span class="arrow"></span>
+</div>
+<div id="content" class="hidden">
+Hra lodě je strategická hra pro dva hráče, kteří se střídají v označování políček na herní desce, kde se podle nich
+nacházejí lodě protivníka. Cílem je potopit všechny lodě soupeře uhodnutím jejich umístění na herní desce. Hra kombinuje
+systematické a náhodné útoky, aby hráči pokryli co největší část herní desky a odhalili polohu lodí soupeře.
+</div>
+
+
+    <div id="main">
+        <div class="board">
+            <div class="displays">
+                <div class="top">
+                    <ul class="grid"></ul>
+                </div>
+                <div class="bottom">
+                    <ul class="grid"></ul>
+                </div>
+            </div>
+        </div>
+        <div class="panel">
+            <div class="topPanel">
+                <div class="layout">
+                    <div class='buttons one'>Start</div>
+                    <div class='buttons multi'></div>
+                </div>
+            </div>
+            <div class='console'>
+                <span class='text'></span>
+            </div>
+        </div>
+    </div>
+    <script src="lode.js"></script>
+</body>
+
+</html>
