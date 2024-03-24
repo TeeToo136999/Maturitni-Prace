@@ -427,10 +427,30 @@ nav img {
     color: #fff;
     visibility: hidden;
     position: absolute;
-    top: calc(65% + 10px);
+    top: calc(65% + 100px);
     right: 65%;
     left: 2%;
     max-width: 20%;
     transform: translateY(-50%);
     z-index: 999;
+}
+
+/* Media Queries for smaller devices */
+@media only screen and (max-width: 768px) {
+    .nav-links {
+        text-align: center;
+        flex: auto;
+        margin: 20px 0;
+    }
+
+    .nav-links ul li {
+        display: block;
+        padding: 8px 0;
+    }
+}
+@media only screen and (max-width: 1259px) {
+    .arrow-toggle,
+    .hidden {
+        display: none;
+    }
 }

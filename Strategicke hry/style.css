@@ -38,8 +38,16 @@ nav img {
 
 .text-box h1 {
     font-size: 62px;
+
+}
+.text-box h3{
+    font-size: 30px;
 }
 
+.text-box h2{
+    font-size: 10px;
+
+}
 .text-box p {
     margin: 10px 0 40px;
     font-size: 14px;

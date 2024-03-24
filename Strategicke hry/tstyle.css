@@ -1,10 +1,11 @@
-/*stranka*/
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
     font-family: "Poppins", sans-serif;
 }
 
+/* Header Styles */
 .header {
     min-height: 100vh;
     width: 100%;
@@ -57,9 +58,9 @@ nav img {
     width: 100%;
 }
 
-/*hra*/
+/* Game Section Styles */
 .container {
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -81,27 +82,27 @@ nav img {
     font-size: 36px;
     cursor: pointer;
     margin: 5px;
-
 }
+
 .game-section {
+    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 80vh;
+    color: white;
 }
 
-   .game-section>div {
-    margin-bottom: 20px;
+.game-section > div {
+    margin-bottom: 20px;    
 }
 
-.players{
+.players {
     cursor: pointer;
 }
 
-
-
-/*popis*/
+/* Description Section Styles */
 .arrow-toggle {
     cursor: pointer;
     position: absolute;
@@ -110,6 +111,7 @@ nav img {
     transform: translateY(-50%);
     z-index: 999;
     color: #fff;
+    flex-direction: column;
 }
 
 .arrow {
@@ -120,6 +122,7 @@ nav img {
     border-width: 5px 5px 0 5px;
     border-color: #fff transparent transparent transparent;
     margin-left: 5px;
+    flex-direction: column;
 }
 
 .hidden {
@@ -131,4 +134,27 @@ nav img {
     left: 70%;
     transform: translateY(-50%);
     z-index: 999;
+    flex-direction: column;
+}
+
+/* Media Queries for smaller devices */
+@media only screen and (max-width: 768px) {
+    .nav-links {
+        text-align: center;
+        flex: auto;
+        margin: 20px 0;
+    }
+
+    .nav-links ul li {
+        display: block;
+        padding: 8px 0;
+    }
+
+}
+
+@media only screen and (max-width: 968px) {
+    .arrow-toggle,
+    .hidden {
+        display: none;
+    }
 }

@@ -72,13 +72,13 @@ function Ship(name){
 
 
 var output = {
-	"welcome": " >Výtej ve hře lodě. Klikni na start pro spuštění hry.",
+	"welcome": " >Vítej ve hře lodě. Klikni na start pro spuštění hry.",
 	"not": " > Tahle možnost v momentální chvíli bohužel nefunguje.",
 	"player1": " >Chceš si poskládat lodě sám? Nebo to nechat na náhodě",
 	"self": " > Použí myš a Horizontální nebo Vertikální tlačítko aby si položil lodě na spodní hrací pole.",
 	"overlap": " > Nemůžeš dát lodě přes sebe. Zkus to znovu.",
 	"start": " > Použí myš aby si vystřelil na vrchní pole. Hodně štěstí!",
-	placed: function(name) { return " > Tvoje " + name + " položeny."; },
+	placed: function(name) { return " > Tvoje " + name + " položena."; },
 	hit: function(name, type) { return " > " + name + "loď byla zasažena." },
 	miss: function(name) { return " > " + name + " vedle!" },
 	sunk: function(user, type) { return " > " + user + type + " byla potopena!" },

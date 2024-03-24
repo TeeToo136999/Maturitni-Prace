@@ -15,9 +15,17 @@ function cellClick(index) {
         cells[index].innerText = currentPlayer;
         if (checkWin()) {
             alert(currentPlayer + " vyhrál!");
+            var container = document.querySelector('.container');
+            container.style.display = 'none';
+            var selectorDiv = document.querySelector('.game-section > div');
+            selectorDiv.style.display = 'flex';
             gameActive = false;
         } else if (checkDraw()) {
             alert("Remíza!");
+            var container = document.querySelector('.container');
+            container.style.display = 'none';
+            var selectorDiv = document.querySelector('.game-section > div');
+            selectorDiv.style.display = 'flex';
             gameActive = false;
         } else {
             currentPlayer = currentPlayer === "X" ? "O" : "X";
@@ -64,6 +72,11 @@ function startGame() {
     currentPlayer = "X";
     board = ['', '', '', '', '', '', '', '', ''];
     cells.forEach(cell => cell.innerText = '');
+    var container = document.querySelector('.container');
+    container.style.display = 'flex';
+    var selectorDiv = document.querySelector('.game-section > div');
+    selectorDiv.style.display = 'none';
+    
 }
 function computerTurn() {
     let bestScore = -Infinity;
