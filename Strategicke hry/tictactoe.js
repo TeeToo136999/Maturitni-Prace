@@ -1,4 +1,4 @@
-let currentPlayer = "X";
+let currentPlayer = "×";
 let board = ['', '', '', '', '', '', '', '', ''];
 let gameActive = false;
 
@@ -28,8 +28,8 @@ function cellClick(index) {
             selectorDiv.style.display = 'flex';
             gameActive = false;
         } else {
-            currentPlayer = currentPlayer === "X" ? "O" : "X";
-            if (document.getElementById('vsComputer').checked && currentPlayer === "O") {
+            currentPlayer = currentPlayer === "×" ? "○" : "×";
+            if (document.getElementById('vsComputer').checked && currentPlayer === "○") {
                 computerTurn();
             }
         }
@@ -69,7 +69,7 @@ function checkDraw() {
 
 function startGame() {
     gameActive = true;
-    currentPlayer = "X";
+    currentPlayer = "×";
     board = ['', '', '', '', '', '', '', '', ''];
     cells.forEach(cell => cell.innerText = '');
     var container = document.querySelector('.container');
@@ -84,7 +84,7 @@ function computerTurn() {
 
     for (let i = 0; i < board.length; i++) {
         if (board[i] === '') {
-            board[i] = 'O';
+            board[i] = '○';
             let score = minimax(board, 0, false);
             board[i] = '';
             if (score > bestScore) {
@@ -110,7 +110,7 @@ function minimax(board, depth, isMaximizing) {
         let bestScore = -Infinity;
         for (let i = 0; i < board.length; i++) {
             if (board[i] === '') {
-                board[i] = 'O';
+                board[i] = '∘';
                 let score = minimax(board, depth + 1, false);
                 board[i] = '';
                 bestScore = Math.max(score, bestScore);
@@ -121,7 +121,7 @@ function minimax(board, depth, isMaximizing) {
         let bestScore = Infinity;
         for (let i = 0; i < board.length; i++) {
             if (board[i] === '') {
-                board[i] = 'X';
+                board[i] = '×';
                 let score = minimax(board, depth + 1, true);
                 board[i] = '';
                 bestScore = Math.min(score, bestScore);
